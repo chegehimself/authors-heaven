@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+
+
+.pattern {
+    background: url('../imgs/crissxcross.png') repeat;
+}
+
+.logo {
+    font-family: 'Sacramento', cursive;
+    color: white;
+    font-size: 45px;
+    margin: 0px
+}
