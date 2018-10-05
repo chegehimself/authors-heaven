@@ -9,3 +9,7 @@
 nav {
     background-color: black;
 }
+
+nav .brand-logo {
+    color: #C8E6C9;
+}
