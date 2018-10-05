@@ -34,7 +34,14 @@
                             </div>
                             <p> <a href="sign-up.html" class="grey-text" >Forgot Password?</a></p>
                         </div>
-
+                        <div class="row">
+                            <button  type="button" onclick="relocate()" class="loginBtn loginBtn--facebook">
+                                Facebook
+                            </button>
+                            <button type="button" onclick="relocate()" class="loginBtn loginBtn--google">
+                                Google
+                              </button>
+                        </div>
                         <div class="card-action center-align">
                             <a onclick="submit()" class="waves-effect btn">Sign In</a>
                         </div>
@@ -61,6 +68,9 @@
                 }
             }
             window.location.href = 'https://google.com';
+        }
+        function relocate() {
+            window.location.replace("profile.html");
         }
     </script>
 </body>
