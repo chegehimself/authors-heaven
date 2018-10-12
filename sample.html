@@ -6,6 +6,7 @@
         <!--Import materialize.css-->
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" >
         <link rel="stylesheet" href="./static/css/style.css">
         <link rel="stylesheet" href="node_modules/trumbowyg/dist/ui/trumbowyg.min.css">
         <!--Let browser know website is optimized for mobile-->
@@ -31,13 +32,12 @@
                         <ul class="right">
                             <li><a href="#"><i  class="material-icons">search</i></a></li>
                             <li><a href="#"><i class="material-icons">bookmark_border</i></a></li>
-                            <li><a href="#"><i class="material-icons">notifications_none</i></a></li>
+                            <li><a href="notifications.html"><i class="material-icons">notifications_none</i></a></li>
                             <li><a href="#" class="nav-image"><img src="static/img/avatar.png" alt="avatar"></a></li>
                         </ul>
                     </div>
                 </nav>
             </div>
-
             
             <div class="container white" >
                 <div class="row">
@@ -180,14 +180,64 @@
                     Reply</button>
                 </div>
             </div>
-
-           
             
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+            <div style="position: fixed; left: 30px; top: 100px; width: 100px; ">
+                
+                <div class="rating" data-vote="0" style="transform: rotate(180deg)">
+
+                    <div class="star hidden">
+                      <span class="full"data-value="0"></span>
+                      <span class="half"data-value="0"></span>
+                    </div>
+                  
+                    <div class="star">
+                  
+                      <span class="full" data-value="1"></span>
+                      <span class="half" data-value="0.5"></span>
+                      <span class="selected"></span>
+                  
+                    </div>
+                  
+                    <div class="star">
+                  
+                      <span class="full" data-value="2"></span>
+                      <span class="half" data-value="1.5"></span>
+                      <span class="selected"></span>
+                  
+                    </div>
+                  
+                    <div class="star">
+                  
+                      <span class="full" data-value="3"></span>
+                      <span class="half" data-value="2.5"></span>
+                      <span class="selected"></span>
+                  
+                    </div>
+                  
+                    <div class="star">
+                  
+                      <span class="full" data-value="4"></span>
+                      <span class="half" data-value="3.5"></span>
+                      <span class="selected"></span>
+                  
+                    </div>
+                  
+                    <div class="star">
+                  
+                      <span class="full" data-value="5"></span>
+                      <span class="half" data-value="4.5"></span>
+                      <span class="selected"></span>
+                  
+                    </div>
+                    <div style="transform: rotate(180deg); margin: 0; padding: 0; display: block">
+                        <p id="ratingTxt" style="color: black; margin: 0; padding: 0">(0.0)</p>
+                    </div>
+                  </div>
+            </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="/static/js/script.js"></script>
+        <script src="static/js/script.js"></script>
         <script src="node_modules/trumbowyg/dist/trumbowyg.min.js"></script>
         <script>
             
@@ -201,4 +251,3 @@
     
 
     
-            
