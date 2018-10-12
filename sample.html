@@ -98,6 +98,7 @@
                             </a>
                         </div>
                     </div>
+                   
                 </div>
                 <div class="row comments section">
                     <h2> Comments</h2>
@@ -247,7 +248,14 @@
         <script src="node_modules/trumbowyg/dist/trumbowyg.min.js"></script>
         <script>
             
-           
+           function togle(fav_icon){
+               if(fav_icon.innerHTML==="turned_in_not"){
+                fav_icon.innerHTML="turned_in"
+               }
+               else{
+                fav_icon.innerHTML="turned_in_not"
+               }
+           }
         </script>
     </body>
   </html>

@@ -216,6 +216,9 @@ nav{
     margin:10px;
 }
 
+.fav_icon{
+    color:teal;
+}
 .rating {
     text-align: center;
     margin-top: 120px;
