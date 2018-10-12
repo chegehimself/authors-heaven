@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Sacramento');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 
 html, body{
@@ -6,12 +7,11 @@ html, body{
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
 }
 .body img{
-    width: 500px;
-    height: 300px;
+    width: 100%;
 }
 .author_name {
     color: #bbb;
@@ -23,7 +23,7 @@ nav{
 
 
 .brand-logo{
-    font-family: 'Sacramento', cursive; 
+    font-family: 'Sacramento', cursive;
 }
 
 .nav-wrapper a{
@@ -199,6 +199,18 @@ nav{
     margin-top:0px;
 }
 
+.notification {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #fff !important;
+    background-color: #F9A825 !important;
+    border-radius: 2px;
+    margin-top: 20px;
+}
+
+.btn-notification {
+    background-color: #F9A825;
+}
 
 .create_articel{
     margin:10px;
@@ -206,4 +218,143 @@ nav{
 
 .fav_icon{
     color:teal;
+}
+.rating {
+    text-align: center;
+    margin-top: 120px;
+    position: relative;
+    width: 50%;
+    float: left;
+}
+
+.hidden {
+    opacity: 0;
+
+}
+
+.star {
+    display: inline-block;
+    margin: 2px;
+    font-size: 25px;
+    color: #e4e4e4;
+    position: relative;
+    transform: rotate(90deg);
+}
+.star.animate {
+    -webkit-animation: stretch-bounce .5s ease-in-out;
+
+}
+.star.hidden {
+    opacity: 0;
+
+}
+
+.full:before {
+    font-family: fontAwesome;
+    display: inline-block;
+    content: "\f005";
+    position: relative;
+    float: right;
+    z-index: 2;
+
+}
+
+.half:before {
+    font-family: fontAwesome;
+    content: "\f089";
+    position: absolute;
+    float: left;
+    z-index: 3;
+
+}
+
+.star-colour {
+    color: #ffd700;
+
+}
+
+@-webkit-keyframes stretch-bounce {
+    0% {
+        -webkit-transform: scale(1);
+
+    }
+    25% {
+        -webkit-transform: scale(1.5);
+
+    }
+    50% {
+        -webkit-transform: scale(0.9);
+
+    }
+    75% {
+        -webkit-transform: scale(1.2);
+
+    }
+    100% {
+        -webkit-transform: scale(1);
+
+    }
+
+}
+.selected:before {
+    font-family: fontAwesome;
+    display: inline-block;
+    content: "\f005";
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: scale(1);
+    opacity: 1;
+    z-index: 1;
+
+}
+.selected.pulse:before {
+    -webkit-transform: scale(3);
+    opacity: 0;
+
+}
+.selected.is-animated:before {
+    transition: 1s ease-out;
+
+}
+
+.score {
+    font-family: arial;
+    font-size: 20px;
+    color: green;
+    margin-top: 20px;
+    margin-left: 50px;
+
+}
+
+.score-rating {
+    vertical-align: sup;
+    top: -5px;
+    position: relative;
+    font-size: 150%;
+
+}
+
+.total {
+    vertical-align: sub;
+    top: 0px;
+    position: relative;
+    font-size: 100%;
+
+}
+
+.average {
+    font-family: arial;
+    font-size: 20px;
+    color: indianred;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+.average .score-average {
+    padding-top: 30px;
+
 }

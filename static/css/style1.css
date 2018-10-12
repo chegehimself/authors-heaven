@@ -4,10 +4,19 @@ nav{
     background-color:#fff;
 }
 
-
+main{
+    max-width: 900px;
+    margin: auto; 
+}
 
 .brand-logo{
     font-family: 'Sacramento', cursive; 
+}
+
+h2 {
+    color:teal;
+    text-align: center;
+    font-size: 30px
 }
 
 .nav-wrapper a{
@@ -41,6 +50,7 @@ nav{
     height:50px;
     border-bottom: 1px solid #bbb;
 }
+
 
 .user-image img{
     border-radius:50%;
@@ -117,7 +127,7 @@ nav{
         width:90%;
     }
 }
-
+.waves-effect waves-light btn
 .user-info #following{
     display: flex;
     justify-content: space-between;
@@ -125,6 +135,11 @@ nav{
 
 .user-info #following a{
     color:#bbb;
+}
+.profile-container{
+    display: flex;
+    justify-content: space-between;
+    width:350px;
 }
 
 .user-info #following a:hover{
@@ -202,4 +217,8 @@ nav{
 
 .interaction a{
     color:teal;
+}
+
+#likes #thumb-up-likes{
+    padding-bottom: 15px;
 }
