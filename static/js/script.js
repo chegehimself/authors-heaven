@@ -119,3 +119,15 @@ function calculateAverage() {
     $('#ratingTxt').html('('+(average/ $('.rating').length).toFixed(1)+')')
 }
 
+var i = 0;
+function likeClick() {
+    i++;
+    $('#thumb-up-like').html(i)
+    //document.getElementById('thumb-up-like').innerHTML = i;
+}
+
+function unlikeClick() {
+    i++;
+    $('#thumb-down-dislike').html(i)
+    //document.getElementById('thumb-up-like').innerHTML = i;
+}
