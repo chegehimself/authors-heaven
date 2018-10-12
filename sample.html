@@ -91,7 +91,13 @@
                         <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
                             <img src="https://simplesharebuttons.com/images/somacro/pinterest.png" width="50" alt="Pinterest" />
                         </a>
+                        <a href="javascript:void(0);" class="col s1 offset-s11 fav_icon">
+                           <i onclick="togle(this)" class=" small material-icons">turned_in_not</i>
+                        </a>
+                            
+                        
                     </div>
+                   
                 </div>
                 <div class="row comments section">
                     <h2> Comments</h2>
@@ -191,7 +197,14 @@
         <script src="node_modules/trumbowyg/dist/trumbowyg.min.js"></script>
         <script>
             
-           
+           function togle(fav_icon){
+               if(fav_icon.innerHTML==="turned_in_not"){
+                fav_icon.innerHTML="turned_in"
+               }
+               else{
+                fav_icon.innerHTML="turned_in_not"
+               }
+           }
         </script>
     </body>
   </html>
