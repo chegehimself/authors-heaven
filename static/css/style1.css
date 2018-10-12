@@ -203,3 +203,7 @@ nav{
 .interaction a{
     color:teal;
 }
+
+#likes #thumb-up-likes{
+    padding-bottom: 15px;
+}
