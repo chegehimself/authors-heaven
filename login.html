@@ -27,15 +27,6 @@
 </head>
 
 <body class="teal pattern">
-    
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.1&appId=1021611871334229&autoLogAppEvents=1';
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
     <div class="container">
         <div class="row">
             <div class="col s12 offset-m2 m8 l6 offset-l3">
@@ -61,14 +52,6 @@
                         <!-- <h1>Welcome to My Awesome App</h1> -->
                         <div id="firebaseui-auth-container"></div>
                         <div id="loader">Loading...</div>
-                        <div class="row">
-                            <button  type="button" onclick="relocate()" class="loginBtn loginBtn--facebook">
-                                Facebook
-                            </button>
-                            <button type="button" onclick="relocate()" class="loginBtn loginBtn--google">
-                                Google
-                              </button>
-                        </div>
                         <p> <a href="forgot_password.html" class="grey-text">Forgot Password?</a></p>
                         <div class="card-action center-align">
                             <a onclick="submit()" class="waves-effect btn">Sign In</a>
@@ -128,8 +111,8 @@
   signInOptions: [
     // Leave the lines as is for the providers you want to offer your users.
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-    // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-    // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+    firebase.auth.TwitterAuthProvider.PROVIDER_ID,
     // firebase.auth.GithubAuthProvider.PROVIDER_ID,
     // firebase.auth.EmailAuthProvider.PROVIDER_ID,
     // firebase.auth.PhoneAuthProvider.PROVIDER_ID
