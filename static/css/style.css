@@ -199,6 +199,7 @@ nav{
     margin-top:0px;
 }
 
+<<<<<<< HEAD
 .notification {
     font-weight: 300;
     font-size: 0.8rem;
@@ -211,3 +212,9 @@ nav{
 .btn-notification {
     background-color: #F9A825;
 }
+=======
+
+.create_articel{
+    margin:10px;
+}
+>>>>>>> 8b0adc9b3a85d21f755e57d8bbabf5df3ee29f15

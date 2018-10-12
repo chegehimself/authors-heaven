@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
   <html>
     <head>
@@ -5,15 +6,20 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
         <!-- Compiled and minified CSS -->
+        <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <link rel="stylesheet" href="./static/css/style.css">
         <link rel="stylesheet" href="node_modules/trumbowyg/dist/ui/trumbowyg.min.css">
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script src="ckeditor/ckeditor.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <title>Create Article| Author's Haven</title>
     </head>
 
-    <body>        
+    <body>
         <div class="navbar-fixed">
             <nav>
                 <div class="nav-wrapper container">
@@ -29,41 +35,58 @@
                 </div>
             </nav>
         </div>
-
         <div class="container">
-            <div class="row">
-                <div class="col s12">
-                    <div class="trumbowg">
 
-                    </div>
-                    <div id="editor">
 
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="/static/js/script.js"></script>
-        <script src="node_modules/trumbowyg/dist/trumbowyg.min.js"></script>
+          </div>
+          <div class="container">
+                <div class="create-article">
+                    <div class="row section">
+                            <div class="col s12">
+                                <div class="input-field col s12">
+                                    <label class="active">Title</label>
+                                    <input id="title" type="text" class="validate">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row section">
+                                <div class="col s12">
+                                    <div class="input-field col s12">
+                                        <label class="active">Description</label>
+                                        <input id="description" type="text" class="validate">
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="row">
+                                <form class="col s12">
+                                  <div class="row">
+                                    <div class="input-field col s12">
+                                      <textarea name="editor1" id="editor1" rows="10" cols="80"></textarea>
+                                      <label for="Body"></label>
+                                    </div>
+                                  </div>
+                                </form>
+                        </div>
+                    <label class="active">Tags</label>
+                    <div class="chips chips-placeholder"></div>
+                <a class="waves-effect waves-light btn section">Save Article</a>
+                <a class="waves-effect waves-light btn red">Discard</a>
+          </div>
         <script>
-            var $modal = $('#editor').trumbowyg('openModal', {
-                    title: 'A title for modal box',
-                    content: '<p>Content in HTML which you want include in created modal box</p>'
-                });
-
-                // Close current modal box
-                $('#editor').trumbowyg('closeModal');
-            
+            // Replace the <textarea id="editor1"> with a CKEditor
+            // instance, using default configuration.
+            CKEDITOR.replace( 'editor1' );
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.chips');
+                var instances = M.Chips.init(elems);
+            });
         </script>
     </body>
   </html>
 
 
 
-    
 
-    
+
+
             
