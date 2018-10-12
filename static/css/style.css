@@ -199,10 +199,24 @@ nav{
     margin-top:0px;
 }
 
+.notification {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #fff !important;
+    background-color: #F9A825 !important;
+    border-radius: 2px;
+    margin-top: 20px;
+}
+
+.btn-notification {
+    background-color: #F9A825;
+}
+=======
 
 .create_articel{
     margin:10px;
 }
+<<<<<<< HEAD
 
 .rating {
     text-align: center;
@@ -343,4 +357,3 @@ nav{
     padding-top: 30px;
 
 }
-

@@ -119,4 +119,3 @@ function calculateAverage() {
     $('#ratingTxt').html('('+(average/ $('.rating').length).toFixed(1)+')')
 }
 
-  
