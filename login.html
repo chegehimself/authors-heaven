@@ -5,21 +5,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-
+    <meta name="google-signin-client_id" content="266520652058-jvvihqpsg2oj8plo61m42p0i6cknppfs.apps.googleusercontent.com
+    .apps.googleusercontent.com">
     <title>Test</title><!-- Compiled and minified CSS -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAtQlgYmZxtvighcpfPr7PAi14tq7P68Cw",
+            authDomain: "authors-haven-ba358.firebaseapp.com",
+            databaseURL: "https://authors-haven-ba358.firebaseio.com",
+            projectId: "authors-haven-ba358",
+            storageBucket: "",
+            messagingSenderId: "254944267573"
+        };
+        firebase.initializeApp(config);
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="css/ed-style.css" type="text/css">
 </head>
 
 <body class="teal pattern">
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.1&appId=1021611871334229&autoLogAppEvents=1';
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
     <div class="container">
         <div class="row">
             <div class="col s12 offset-m2 m8 l6 offset-l3">
@@ -42,24 +50,22 @@
                                 <input id="password" type="password" class="validate"> <label for="password">Password</label>
                             </div>
                         </div>
-                        <div class="row">
-                            <button  type="button" onclick="relocate()" class="loginBtn loginBtn--facebook">
-                                Facebook
-                            </button>
-                            <button type="button" onclick="relocate()" class="loginBtn loginBtn--google">
-                                Google
-                              </button>
-                        </div>
-                        <p> <a href="forgot_password.html" class="grey-text">Forgot Password?</a></p>
+                        <!-- <h1>Welcome to My Awesome App</h1> -->
+                        <div id="firebaseui-auth-container"></div>
+                        <div id="loader">Loading...</div>
                         <div class="card-action center-align">
                             <a onclick="submit()" class="waves-effect btn">Sign In</a>
                         </div>
                     </div>
                 </form>
-                <p class="center-align"> <a href="forgot_password.html" class="white-text">Create Account?</a></p>
+                <p class="center-align"> <a href="forgot_password.html" class="white-text">Forgot Password?</a><br>
+                    <a href="forgot_password.html" class="white-text">Sign up</a>
+                </p>
             </div>
         </div>
     </div>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" type="text/javascript"> </script>
     <script charset="utf-8" type="text/javascript">
@@ -81,6 +87,45 @@
         function relocate() {
             window.location.replace("profile.html");
         }
+    </script>
+    <!--firebase-->
+    <script>
+
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+
+        var uiConfig = {
+            callbacks: {
+                signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+                    // User successfully signed in.
+                    // Return type determines whether we continue the redirect automatically
+                    // or whether we leave that to developer to handle.
+                    return true;
+                },
+                uiShown: function () {
+                    // The widget is rendered.
+                    // Hide the loader.
+                    document.getElementById('loader').style.display = 'none';
+                }
+            },
+            // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+            signInFlow: 'popup',
+            signInSuccessUrl: 'https://james-chege.github.io/authors-heaven/profile.html#',
+            signInOptions: [
+                // Leave the lines as is for the providers you want to offer your users.
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+                firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+                firebase.auth.GithubAuthProvider.PROVIDER_ID,
+                // firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                // firebase.auth.PhoneAuthProvider.PROVIDER_ID
+            ],
+            // Terms of service url.
+            tosUrl: 'https://james-chege.github.io/authors-heaven/login.html#',
+            // Privacy policy url.
+            privacyPolicyUrl: '<your-privacy-policy-url>'
+        };
+
+        ui.start('#firebaseui-auth-container', uiConfig);
     </script>
 </body>
 
