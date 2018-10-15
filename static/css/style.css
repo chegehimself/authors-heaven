@@ -216,7 +216,7 @@ nav{
     margin:10px;
 }
 
-.fav_icon{
+.fav_icon #icons{
     color:teal;
 }
 .rating {
@@ -357,4 +357,20 @@ nav{
 .average .score-average {
     padding-top: 30px;
 
+}
+
+
+#icons{
+    color:transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: teal;
+}
+
+#thumb-up-like,
+#thumb-down-dislike{
+    color:teal;
+}
+
+.targeted-icons #icons{
+    color:teal;
 }

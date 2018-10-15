@@ -6,7 +6,7 @@
         <!--Import materialize.css-->
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./static/css/style.css">
         <link rel="stylesheet" href="node_modules/trumbowyg/dist/ui/trumbowyg.min.css">
         <!--Let browser know website is optimized for mobile-->
@@ -73,34 +73,52 @@
                             </p>
                         </div>
                         <div style="position: fixed; top: 250px; right: 80px;">
-                            <a href="http://www.facebook.com/sharer.php?u=https://james-chege.github.io/authors-heaven/sample.html" target="_blank">
-                                <img src="https://simplesharebuttons.com/images/somacro/facebook.png" width="40" alt="Facebook" />
-                            </a>
-                            <br>
+                            <div id="target-like-icons">
+                                <a href="javascript:void(0);" target="_blank" onclick="likeClick()">
+                                    <i class="fa fa-thumbs-up fa-lg" id="icons"></i> 
+                                </a>
+                                <a href="#" id="thumb-up-like">15</a>
+                                <br><br>
+                            </div>
+                            <div id="target-dislike-icons">
+                                <a href="javascript:void(0);" target="_blank" onclick="unlikeClick()">
+                                    <i class="fa fa-thumbs-down fa-lg" id="icons"></i>
+                                </a>
+                                <a href="#" id="thumb-down-dislike">5</a> 
+                                <br><br>
+                            </div>
+                                <a href="http://www.facebook.com/sharer.php?u=https://james-chege.github.io/authors-heaven/sample.html" target="_blank">
+                                    <i class="fa fa-facebook fa-lg" id="icons"></i> 
+                                </a>
+                                <br><br>
+                            
+                            
+                            
                             
                             <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
-                                <img src="https://simplesharebuttons.com/images/somacro/email.png" width="40" alt="Email" />
-                            </a>
-                            <br>
+                                <i class="fa fa-envelope fa-lg" id="icons"></i></a>
+                            <br><br>
+
                             <a href="https://twitter.com/share?url=https://james-chege.github.io/authors-heaven/sample.html&amp;text=Amazing Read" target="_blank">
-                                <img src="https://simplesharebuttons.com/images/somacro/twitter.png" width="40" alt="Twitter" />
+                            <i class="fa fa-twitter fa-lg" id="icons"></i> 
                             </a>
-                            <br>
+                            <br><br>
                                 <!-- LinkedIn -->
                             <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://james-chege.github.io/authors-heaven/sample.html" target="_blank">
-                                <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" width="40" alt="LinkedIn" />
+                                <i class="fa fa-linkedin fa-lg" id="icons"></i> 
                             </a>
-                            <br>
+                            <br><br>
                             
                             <!-- Pinterest -->
-                            <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
-                                <img src="https://simplesharebuttons.com/images/somacro/pinterest.png" width="40" alt="Pinterest" />
-                            </a>
-                            <br>
-                            <br>
-                            <a href="javascript:void(0);" class="fav_icon">
-                                <i class="material-icons" onclick="togle(this)" title="favourite" style="font-size:40px">turned_in_not</i>
-                            </a>
+                            <!-- <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+                                <i class="fa fa-pinterest fa-lg" style="color:transparent; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: teal;"></i> 
+                            </a> -->
+                            <div id="favorite">
+                                <a href="javascript:void(0);" id="fav_icon">
+                                    <i class="fa fa-bookmark fa-lg" onclick="togle()" id="icons" title="favourite"></i>
+                                </a>
+                            </div>
+                            
                         </div>
                     </div>
                    
@@ -253,13 +271,8 @@
         <script src="node_modules/trumbowyg/dist/trumbowyg.min.js"></script>
         <script>
             
-           function togle(fav_icon){
-               if(fav_icon.innerHTML==="turned_in_not"){
-                fav_icon.innerHTML="turned_in"
-               }
-               else{
-                fav_icon.innerHTML="turned_in_not"
-               }
+           function togle(){
+                $('#favorite').toggleClass('fav_icon')
            }
         </script>
     </body>

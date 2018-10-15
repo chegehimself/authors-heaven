@@ -219,6 +219,8 @@ h2 {
     color:teal;
 }
 
-#likes #thumb-up-likes{
-    padding-bottom: 15px;
+#likes #icons{
+    color:transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: teal;
 }

@@ -118,16 +118,70 @@ function calculateAverage() {
 
     $('#ratingTxt').html('('+(average/ $('.rating').length).toFixed(1)+')')
 }
+var x = document.getElementById('thumb-down-dislike').innerHTML;
+var i = document.getElementById('thumb-up-like').innerHTML;
+var likeClicked = false;
+var dislikeClicked = false;
+// function likeClick() {
+//     i++;
+//     $('#thumb-up-like').html(i);
+//     $('#target-like-icons').toggleClass('targeted-icons');
+// }
 
-var i = 0;
+
+// function unlikeClick() {
+//     x++;
+//     $('#thumb-down-dislike').html(x);
+//     $('#target-dislike-icons').toggleClass('targeted-icons')
+// }
+
 function likeClick() {
-    i++;
-    $('#thumb-up-like').html(i)
-    //document.getElementById('thumb-up-like').innerHTML = i;
+    if(likeClicked===false && dislikeClicked===false){
+        i++;
+        $('#thumb-up-like').html(i);
+        $('#target-like-icons').addClass('targeted-icons');
+        likeClicked=true;
+    }else if(likeClicked===true && dislikeClicked===false){
+        i--;
+        $('#thumb-up-like').html(i);
+        $('#target-like-icons').removeClass('targeted-icons');
+        likeClicked=false;
+    }else if(likeClicked===false && dislikeClicked===true){
+        i++;
+        x--;
+        
+        $('#thumb-up-like').html(i);
+        $('#thumb-down-dislike').html(x);
+        
+        $('#target-like-icons').addClass('targeted-icons');
+        $('#target-dislike-icons').removeClass('targeted-icons');
+        likeClicked=true;
+        dislikeClicked=false;
+    }   
 }
 
+
 function unlikeClick() {
-    i++;
-    $('#thumb-down-dislike').html(i)
-    //document.getElementById('thumb-up-like').innerHTML = i;
+    if(dislikeClicked===false && likeClicked===false){
+        x++;
+        $('#thumb-down-dislike').html(x);
+        $('#target-dislike-icons').addClass('targeted-icons');
+        dislikeClicked=true;
+    }else if(dislikeClicked===true && likeClicked===false){
+        x--;
+        $('#thumb-down-dislike').html(x);
+        $('#target-dislike-icons').removeClass('targeted-icons');
+        dislikeClicked=false;
+    }else if(dislikeClicked===false && likeClicked===true){
+        i--;
+        x++;
+        
+        $('#thumb-up-like').html(i);
+        $('#thumb-down-dislike').html(x);
+        
+        $('#target-like-icons').removeClass('targeted-icons');
+        $('#target-dislike-icons').addClass('targeted-icons');
+        likeClicked=false;
+        dislikeClicked=true;
+    }  
 }
