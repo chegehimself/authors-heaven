@@ -10,11 +10,13 @@
     <!--Import materialize.css-->
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
     <link rel="stylesheet" href="static/css/style1.css">
     <title>Users</title>
 </head>
 
 <body>
+
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper container">
@@ -29,66 +31,58 @@
             </div>
         </nav>
     </div>
-    <main>
-        <h2>users</h2>
-        <div class="profile container">
-            <div class="user-data">
-                <div class="user-image">
-                    <img src="static/img/avatar.png" alt="MyDiary">
-                </div>
+    <div class="container">
+        <h2>Users</h2>
+        <ul class="collapsible">
+            <li class="collapsible-header">
+                <a href="user_profile.html" class="user-image"><img src="static/img/avatar.png" alt="avatar"></a>
+                <h2 href="user_profile.html"> Kevin Koech</h2>
 
-            </div>
-
-            <div class="user-info">
-                <div id="username">
-                    <p><a href="user_profile.html">kevin</a></p>
-                </div>
-                <div id="bio">
-                    <p>This is it.</p>
-                </div>
-                <a class="waves-effect waves-light btn" href="profile.html">Follow</a>
-            </div>
-        </div>
-        <hr>
-        <div class="profile container">
-            <div class="user-data">
-                <div class="user-image">
-                    <img src="static/img/avatar.png" alt="MyDiary">
-                </div>
-
-            </div>
-
-            <div class="user-info">
-                <div id="username">
-                    <p><a href="user_profile.html">Moses</a></p>
-                </div>
-                <div id="bio">
-                    <p>Bio</p>
-                </div>
-                <a class="waves-effect waves-light btn" href="profile.html">Follow</a>
-            </div>
-        </div>
-        <hr>
-        <div class="profile container">
-            <div class="user-data">
-                <div class="user-image">
-                    <img src="static/img/avatar.png" alt="MyDiary">
-                </div>
-
-            </div>
-
-            <div class="user-info">
-                <div id="username">
-                    <p><a href="user_profile.html">Brian</a></p>
-                </div>
-                <div id="bio">
-                    <p>Knowledge comes, but wisdon lingers.</p>
-                </div>
-                <a class="waves-effect waves-light btn" href="profile.html">Follow</a>
-            </div>
-        </div>
-        <hr>
-    </main>
+            </li>
+            <li class="collapsible-header">
+                <a href="user_profile.html" " class="user-image " onClick="collapseAll(); "><img src="static/img/avatar.png " alt="avatar "></a>
+                <h2> Edward Njoroge</h2>
+                <div class="collapsible-body "><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li class="collapsible-header ">
+                <a href="user_profile.html " class="user-image "><img src="static/img/avatar.png " alt="avatar "></a>
+                <h2> Kevin De Bruyne</h2>
+            </li>
+            <li class="collapsible-header ">
+                <a href="user_profile.html " class="user-image "><img src="static/img/avatar.png " alt="avatar "></a>
+                <h2> Kenya Olunga</h2>
+            </li>
+            <li class="collapsible-header ">
+                <a href="user_profile.html " class="user-image "><img src="static/img/avatar.png " alt="avatar "></a>
+                <h2> Kevin Kibitok</h2>
+            </li>
+            <li class="collapsible-header ">
+                <a href="user_profile.html " class="user-image "><img src="static/img/avatar.png " alt="avatar "></a>
+                <h2> Brian Koech</h2>
+            </li>
+            <li class="collapsible-header ">
+                <a href="user_profile.html " class="user-image "><img src="static/img/avatar.png " alt="avatar "></a>
+                <h2> Nelson Mandela</h2>
+            </li>
+            <li class="collapsible-header ">
+                <a href="user_profile.html " class="user-image "><img src="static/img/avatar.png " alt="avatar "></a>
+                <h2> Arsene Wenger</h2>
+            </li>
+            <li class="collapsible-header ">
+                <a href="user_profile.html " class="user-image "><img src="static/img/avatar.png " alt="avatar "></a>
+                <h2> Unai Emirates</h2>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js " type="text/javascript ">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " type="text/javascript "> </script>
+    <script charset="utf-8 " type="text/javascript ">
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems, options);
+        });
+    </script>
 </body>
 
 </html>
