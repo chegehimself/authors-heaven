@@ -13,10 +13,24 @@ nav {
 nav .brand-logo {
     color: #C8E6C9;
 }
-
-<<<<<<< HEAD
-=======
 .create_articel{
     margin:10px;
 }
->>>>>>> 8b0adc9b3a85d21f755e57d8bbabf5df3ee29f15
+
+.recent_notifications {
+    color: #159588;
+}
+
+a.logo {
+    color: #159588;
+}
+
+.navigation-bar {
+    background: white;
+    color: #159588 !important;
+}
+
+.collection .collection-item.avatar {
+    min-height: 55px;
+    padding-left: 10px;
+}
