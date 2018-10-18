@@ -126,88 +126,54 @@
                 <div class="row comments section">
                     <h4> Comments</h4>
                     <div class="row">
-                        <form class="col s12">
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <i class="material-icons prefix">mode_edit</i>
-                                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                                    <label for="icon_prefix2">Add Comment</label>
-                                    <button class="btn waves-effect waves-light right" type="submit" name="action">
-                                        <i class="material-icons right">send</i>
-                                        Submit</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div id="stories-content" >
-                        <div class="the-story-content">
-                            <div id="user-information">
-                                <div class="user-image">
-                                    <a href="#"><img src="static/img/avatar.png" alt="avatar"></a>
-                                </div>
-                                <div class="user">
-                                    <div id="user-username" >
-                                        <p class="teal-text"> Gloria</p>
-                                    </div>
-                                    <div id="date-created">
-                                        <p>Oct 2</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-                            </div>
-                        </div>
-                        <button class="btn waves-effect waves-light " type="submit" name="action">
-                            <i class="material-icons right">send</i>
-                            Reply</button>
-                    </div>
-                    <div id="stories-content" >
-                        <div class="the-story-content">
-                            <div id="user-information">
-                                <div class="user-image">
-                                    <a href="#"><img src="static/img/avatar.png" alt="avatar"></a>
-                                </div>
-                                <div class="user">
-                                    <div id="user-username" >
-                                        <p class="teal-text">Ian</p>
-                                    </div>
-                                    <div id="date-created">
-                                        <p>Oct 2</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-                            </div>
-                        </div>
-                        <button class="btn waves-effect waves-light " type="submit" name="action">
-                            <i class="material-icons right">send</i>
-                            Reply</button>
-                    </div>
-                    <div id="stories-content" >
-                        <div class="the-story-content">
-                            <div id="user-information">
-                                <div class="user-image">
-                                    <a href="#"><img src="static/img/avatar.png" alt="avatar"></a>
-                                </div>
-                                <div class="user">
-                                    <div id="user-username" >
-                                        <p class="teal-text"> Kitika</p>
-                                    </div>
-                                    <div id="date-created">
-                                        <p>Oct 2</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                        <div class="row">
+                            <div class="input-field col s11">
+                                <i class="material-icons prefix">mode_edit</i>
+                                <textarea id="commentTxt" class="materialize-textarea" ></textarea>
+                                <label for="commentTxt">Add Comment</label>
+                                <button onclick="addComment()" class="btn waves-effect waves-light right" name="action">
+                                    Submit</button>
                             </div>
                         </div>
                     </div>
-                    <button class="btn waves-effect waves-light " type="submit" name="action">
-                    <i class="material-icons right">send</i>
-                    Reply</button>
+                    <div id="comments">
+                        <div id="stories-content" >
+                            <div class="the-story-content">
+                                <div id="user-information">
+                                    <div class="user-image">
+                                        <a href="#"><img src="static/img/avatar.png" alt="avatar"></a>
+                                    </div>
+                                    <div class="user">
+                                        <div id="user-username" >
+                                            <p class="teal-text">Ian</p>
+                                        </div>
+                                        <div id="date-created">
+                                            <p>Oct 2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="content_1">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                                </div>
+                                <div id="subComments_1" style="margin-left: 100px">
+                                </div>
+                                <p style="padding-left: 20px; padding-bottom: 20px;">
+                                    <a href="javascript:$('#input_1').toggle()" id="comment_1" class="teal-text" style="text-decoration: underline"  >Reply</a>
+                                </p>
+
+                                <div class="row" id="input_1" style="display: none">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">mode_edit</i>
+                                        <textarea id="commentTxt_1" class="materialize-textarea" ></textarea>
+                                        <label for="commentTxt_1">Add Comment</label>
+                                        <button onclick="addSubComment(1)" class="btn waves-effect waves-light right" name="action">
+                                            Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -273,6 +239,76 @@
             
            function togle(){
                 $('#favorite').toggleClass('fav_icon')
+           }
+           
+           var commentCount = 1;
+           function addComment(index) {
+                var comment = $('#commentTxt').val();
+                $('#commentTxt').val('');
+                var html = `<div id="stories-content" >
+                            <div class="the-story-content">
+                                <div id="user-information">
+                                    <div class="user-image">
+                                        <a href="#"><img src="static/img/avatar.png" alt="avatar"></a>
+                                    </div>
+                                    <div class="user">
+                                        <div id="user-username" >
+                                            <p class="teal-text">Ian</p>
+                                        </div>
+                                        <div id="date-created">
+                                            <p>Oct 2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="content_${++commentCount}">
+                                    <p>${comment}</p>
+                                </div>
+                            </div>
+
+                            <div id="subComments_${commentCount}" style="margin-left: 100px">
+                            </div>
+
+                            <p style="padding-left: 20px; padding-bottom: 20px;">
+                                <a href="javascript:$('#input_${commentCount}').toggle()" id="comment_${commentCount}" class="teal-text" style="text-decoration: underline"  >Reply</a>
+                            </p>
+
+                            <div class="row" id="input_${commentCount}" style="display: none">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">mode_edit</i>
+                                    <textarea id="commentTxt_${commentCount}" class="materialize-textarea" ></textarea>
+                                    <label for="commentTxt_${commentCount}">Add Comment</label>
+                                    <button onclick="addSubComment(${commentCount})" class="btn waves-effect waves-light right" name="action">
+                                        Submit</button>
+                                </div>
+                            </div>
+                        </div>`;
+                $('#comments').html(html+$('#comments').html())
+           }
+
+           function addSubComment(count) {
+                var comment = $(`#commentTxt_${count}`).val();
+                $(`#commentTxt_${count}`).val('');
+                $(`#input_${count}`).hide();
+                var html = `<div class="the-story-content" >
+                        <div id="user-information">
+                            <div class="user-image">
+                                <a href="#"><img src="static/img/avatar.png" alt="avatar"></a>
+                            </div>
+                            <div class="user">
+                                <div id="user-username" >
+                                    <p class="teal-text">Ian</p>
+                                </div>
+                                <div id="date-created">
+                                    <p>Oct 2</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="content_1">
+                            <p>${comment}</p>
+                        </div>
+                    </div>`;
+
+                $(`#subComments_${count}`).html($(`#subComments_${count}`).html()+html)
            }
         </script>
     </body>
