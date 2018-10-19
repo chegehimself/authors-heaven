@@ -377,3 +377,7 @@ nav{
 .targeted-icons #icons{
     color:teal;
 }
+
+.dropdown-content {
+    min-width: fit-content !important;
+}
