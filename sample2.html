@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./static/css/style.css">
+        <link rel="stylesheet" href="node_modules/trumbowyg/dist/ui/trumbowyg.min.css">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Sample Article| Author's Haven</title>
+    </head>
+
+    <body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.1&appId=1021611871334229&autoLogAppEvents=1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper container">
+                    <div class="logo">
+                        <a href="#!" class="left brand-logo">Author's Haven</a>
+                    </div>
+                    <ul class="right">
+                        <li onclick="$('#searchTxt').show(); $('#searchTextInput').focus()"><a href="#"><i  class="material-icons">search</i></a></li>
+                        <li><a href="#"><i class="material-icons">bookmark_border</i></a></li>
+                        <li><a href="notifications.html"><i class="material-icons">notifications_none</i></a></li>
+                        <li><a href="#" class="nav-image"><img src="static/img/avatar.png" alt="avatar"></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container white" >
+            <div class="row">
+                <div class="col s12">
+                    <div class="input-field" style="margin-top: 50px;" id="searchTxt">
+                        <i class="material-icons" style="float: right; cursor: pointer" onclick="$('#searchTxt').hide()">close</i>
+                        <input type="text" placeholder="Type to search...." onenter="alert('hi')" style="font-size: 30px" value="" name="" id="searchTextInput"/>
+                        <p style="display: inline-block; margin-right: 30px;"> <label> <input type="checkbox" /> <span>Tags</span> </label> </p>
+                        <p style="display: inline-block; margin-right: 30px;"> <label> <input type="checkbox" /> <span>Title</span> </label> </p>
+                        <p style="display: inline; margin-right: 30px;"> <label> <input type="checkbox" /> <span>Author</span> </label> </p>
+                        <p style="display: inline"> <label> <input type="checkbox" /> <span>Description</span> </label> </p>
+                    </div>
+                    <h2>Sample Article Title</h2>
+                    <p class="author_name">by Kelvin Kitika</p>
+                    <div class="chip">
+                        Pizza
+                    </div>
+                    <div class="chip">
+                        Food
+                    </div>
+                    <div class="chip">
+                        Delicious
+                    </div>
+                    <p>Posted on 6th October 2018 </p>
+                    <p class="author_name">3 mins read </p>
+                    <div class="body">
+                        <div class="center">
+                            <img src="./static/img/food.jpg" alt="" srcset="">
+                        </div>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Placerat vestibulum lectus mauris ultrices eros. Urna condimentum mattis pellentesque id nibh. Viverra accumsan in nisl nisi. Proin sed libero enim sed faucibus turpis in eu. Vel facilisis volutpat est velit egestas dui id. Duis at consectetur lorem donec. Sed faucibus turpis in eu mi. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Aliquam ultrices sagittis orci a scelerisque. Semper eget duis at tellus. Imperdiet dui accumsan sit amet nulla. Cursus vitae congue mauris rhoncus.
+                        </p>
+                        <p>
+                        Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget egestas. Tincidunt praesent semper feugiat nibh sed pulvinar proin. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Diam maecenas ultricies mi eget mauris. Mauris vitae ultricies leo integer malesuada nunc vel risus. Convallis tellus id interdum velit laoreet. Sagittis orci a scelerisque purus semper eget. Vitae turpis massa sed elementum tempus egestas. Parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Aliquet nibh praesent tristique magna sit amet purus gravida quis. Magna fringilla urna porttitor rhoncus dolor purus. Sapien et ligula ullamcorper malesuada proin libero nunc consequat interdum. Lobortis mattis aliquam faucibus purus in massa. Diam in arcu cursus euismod quis viverra. Tortor at auctor urna nunc id cursus. Vitae et leo duis ut diam quam nulla porttitor. Lectus urna duis convallis convallis. Id interdum velit laoreet id donec ultrices. Adipiscing elit pellentesque habitant morbi tristique senectus et netus. Eget nullam non nisi est sit amet.
+                        </p>
+                        <p>
+                        Eget gravida cum sociis natoque penatibus et magnis. In arcu cursus euismod quis viverra nibh. Arcu dui vivamus arcu felis bibendum ut tristique et. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor. In ornare quam viverra orci sagittis eu volutpat odio facilisis. Leo in vitae turpis massa sed elementum tempus egestas. Amet mauris commodo quis imperdiet massa. Pharetra sit amet aliquam id diam maecenas ultricies. Varius vel pharetra vel turpis nunc. Tincidunt dui ut ornare lectus. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec.
+                        </p>
+                        <p>
+                        Tincidunt ornare massa eget egestas purus viverra accumsan in nisl. Ultricies leo integer malesuada nunc vel risus commodo viverra. Quam viverra orci sagittis eu volutpat odio. Tellus mauris a diam maecenas sed. At lectus urna duis convallis convallis tellus id interdum velit. Semper viverra nam libero justo. Est ante in nibh mauris cursus mattis molestie a iaculis. Sed arcu non odio euismod lacinia at quis. Volutpat ac tincidunt vitae semper quis lectus nulla at. Varius quam quisque id diam vel quam. Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum. Neque egestas congue quisque egestas diam in arcu cursus. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Dignissim suspendisse in est ante in nibh. Sapien faucibus et molestie ac. Mauris vitae ultricies leo integer malesuada nunc vel. Egestas fringilla phasellus faucibus scelerisque eleifend. Ac tincidunt vitae semper quis lectus. Elit sed vulputate mi sit amet mauris commodo quis imperdiet. Nibh tellus molestie nunc non blandit.
+                        </p>
+                    </div>
+                    <div style="position: fixed; top: 250px; right: 80px;">
+                        <div id="target-like-icons">
+                            <a href="javascript:void(0);" target="_blank" onclick="likeClick()">
+                                <i class="fa fa-thumbs-up fa-lg" id="icons"></i>
+                            </a>
+                            <a href="#" id="thumb-up-like">15</a>
+                            <br><br>
+                        </div>
+                        <div id="target-dislike-icons">
+                            <a href="javascript:void(0);" target="_blank" onclick="unlikeClick()">
+                                <i class="fa fa-thumbs-down fa-lg" id="icons"></i>
+                            </a>
+                            <a href="#" id="thumb-down-dislike">5</a>
+                            <br><br>
+                        </div>
+                        <a href="http://www.facebook.com/sharer.php?u=https://james-chege.github.io/authors-heaven/sample.html" target="_blank">
+                            <i class="fa fa-facebook fa-lg" id="icons"></i>
+                        </a>
+                        <br><br>
+
+
+
+
+                        <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
+                            <i class="fa fa-envelope fa-lg" id="icons"></i></a>
+                        <br><br>
+
+                        <a href="https://twitter.com/share?url=https://james-chege.github.io/authors-heaven/sample.html&amp;text=Amazing Read" target="_blank">
+                            <i class="fa fa-twitter fa-lg" id="icons"></i>
+                        </a>
+                        <br><br>
+                        <!-- LinkedIn -->
+                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://james-chege.github.io/authors-heaven/sample.html" target="_blank">
+                            <i class="fa fa-linkedin fa-lg" id="icons"></i>
+                        </a>
+                        <br><br>
+
+                        <!-- Pinterest -->
+                        <!-- <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+                            <i class="fa fa-pinterest fa-lg" style="color:transparent; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: teal;"></i>
+                            </a> -->
+                            <div id="favorite">
+                                <a href="javascript:void(0);" id="fav_icon">
+                                    <i class="fa fa-bookmark fa-lg" onclick="togle()" id="icons" title="favourite"></i>
+                                </a>
+                            </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row comments section">
+                <h4> Comments</h4>
+                <div class="row">
+                    <div class="row">
+                        <div class="input-field col s11">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="commentTxt" class="materialize-textarea" ></textarea>
+                            <label for="commentTxt">Add Comment</label>
+                            <button onclick="addComment()" class="btn waves-effect waves-light right" name="action">
+                                Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="comments">
+                    <div id="stories-content" >
+                        <div class="the-story-content">
+                            <div id="user-information">
+                                <div class="user-image">
+                                    <a href="#"><img src="static/img/avatar.png" alt="avatar"></a>
+                                </div>
+                                <div class="user">
+                                    <div id="user-username" >
+                                        <p class="teal-text">Ian</p>
+                                    </div>
+                                    <div id="date-created">
+                                        <p>Oct 2</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="historyTxt" style="margin-left: 30px; display: none; ">
+                                <div id="content_1">
+                                    <p class="teal-text" style="font-style: italic; margin-bottom: 0">(18th February 2018)</p>
+                                    <p style="margin-top: 0; padding-top: 0; margin-left: 20px;">Hi therrrrre</p>
+                                </div>
+                                <div id="content_1">
+                                    <p class="teal-text" style="font-style: italic; margin-bottom: 0">(18th February 2018)</p>
+                                    <p style="margin-top: 0; padding-top: 0; margin-left: 20px;">Hi therer Edwrd</p>
+                                </div>
+                            </div>
+                            <div id="content_1">
+                                <p>Hi there Edward</p>
+                            </div>
+                            <div id="subComments_1" style="margin-left: 100px">
+                            </div>
+                            <p style="padding-left: 20px; padding-bottom: 20px;">
+                            <a href="javascript:$('#input_1').toggle()" id="comment_1" class="teal-text" style="text-decoration: underline"  >Reply</a>
+                            <a href="javascript:$('#historyTxt').toggle()" id="comment_1" class="teal-text" style="text-decoration: underline; float: right"  >History</a>
+                            </p>
+
+                            <div class="row" id="input_1" style="display: none">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">mode_edit</i>
+                                    <textarea id="commentTxt_1" class="materialize-textarea" ></textarea>
+                                    <label for="commentTxt_1">Add Comment</label>
+                                    <button onclick="addSubComment(1)" class="btn waves-effect waves-light right" name="action">
+                                        Submit</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="position: fixed; left: 30px; top: 100px; width: 100px; ">
+
+            <div class="rating" data-vote="0" style="transform: rotate(180deg)">
+
+                <div class="star hidden">
+                    <span class="full"data-value="0"></span>
+                    <span class="half"data-value="0"></span>
+                </div>
+
+                <div class="star">
+
+                    <span class="full" data-value="1"></span>
+                    <span class="half" data-value="0.5"></span>
+                    <span class="selected"></span>
+
+                </div>
+
+                <div class="star">
+
+                    <span class="full" data-value="2"></span>
+                    <span class="half" data-value="1.5"></span>
+                    <span class="selected"></span>
+
+                </div>
+
+                <div class="star">
+
+                    <span class="full" data-value="3"></span>
+                    <span class="half" data-value="2.5"></span>
+                    <span class="selected"></span>
+
+                </div>
+
+                <div class="star">
+
+                    <span class="full" data-value="4"></span>
+                    <span class="half" data-value="3.5"></span>
+                    <span class="selected"></span>
+
+                </div>
+
+                <div class="star">
+
+                    <span class="full" data-value="5"></span>
+                    <span class="half" data-value="4.5"></span>
+                    <span class="selected"></span>
+
+                </div>
+                <div style="transform: rotate(180deg); margin: 0; padding: 0; display: block">
+                    <p id="ratingTxt" style="color: black; margin: 0; padding: 0">(0.0)</p>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="static/js/script.js"></script>
+        <script src="node_modules/trumbowyg/dist/trumbowyg.min.js"></script>
+        <script>
+
+            function togle(){
+                $('#favorite').toggleClass('fav_icon')
+            }
+
+var commentCount = 1;
+function addComment(index) {
+    var comment = $('#commentTxt').val();
+    $('#commentTxt').val('');
+    var html = `<div id="stories-content" >
+                            <div class="the-story-content">
+                                <div id="user-information">
+                                    <div class="user-image">
+                                        <a href="#"><img src="static/img/avatar.png" alt="avatar"></a>
+                                    </div>
+                                    <div class="user">
+                                        <div id="user-username" >
+                                            <p class="teal-text">Ian</p>
+                                        </div>
+                                        <div id="date-created">
+                                            <p>Oct 2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="content_${++commentCount}">
+                                    <p>${comment}</p>
+                                </div>
+                            </div>
+
+                            <div id="subComments_${commentCount}" style="margin-left: 100px">
+                            </div>
+
+                            <p style="padding-left: 20px; padding-bottom: 20px;">
+                                <a href="javascript:$('#input_${commentCount}').toggle()" id="comment_${commentCount}" class="teal-text" style="text-decoration: underline"  >Reply</a>
+                            </p>
+
+                            <div class="row" id="input_${commentCount}" style="display: none">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">mode_edit</i>
+                                    <textarea id="commentTxt_${commentCount}" class="materialize-textarea" ></textarea>
+                                    <label for="commentTxt_${commentCount}">Add Comment</label>
+                                    <button onclick="addSubComment(${commentCount})" class="btn waves-effect waves-light right" name="action">
+                                        Submit</button>
+                                </div>
+                            </div>
+                        </div>`;
+    $('#comments').html(html+$('#comments').html())
+}
+
+function addSubComment(count) {
+    var comment = $(`#commentTxt_${count}`).val();
+    $(`#commentTxt_${count}`).val('');
+    $(`#input_${count}`).hide();
+    var html = `<div class="the-story-content" >
+                        <div id="user-information">
+                            <div class="user-image">
+                                <a href="#"><img src="static/img/avatar.png" alt="avatar"></a>
+                            </div>
+                            <div class="user">
+                                <div id="user-username" >
+                                    <p class="teal-text">Ian</p>
+                                </div>
+                                <div id="date-created">
+                                    <p>Oct 2</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="content_1">
+                            <p>${comment}</p>
+                        </div>
+                    </div>`;
+
+    $(`#subComments_${count}`).html($(`#subComments_${count}`).html()+html)
+}
+        </script>
+        <script charset="utf-8">
+            $('#searchTextInput').keyup(function (evt) {
+                alert();
+            });
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
