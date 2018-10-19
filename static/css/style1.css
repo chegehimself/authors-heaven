@@ -76,6 +76,9 @@ h2 {
     width: 30px;
   }
 }
+.link-line{
+  color: teal;
+}
 
 .user-data {
   margin: 0 auto;
