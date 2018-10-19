@@ -30,7 +30,7 @@
                             <a href="#!" class="left brand-logo">Author's Haven</a>
                         </div>
                         <ul class="right">
-                            <li><a href="#"><i class="material-icons">search</i></a></li>
+                            <li onclick="$('#searchTxt').toggle(); $('#searchTextInput').focus()"><a href="#"><i  class="material-icons">search</i></a></li>
                             <li><a href="#"><i class="material-icons">bookmark_border</i></a></li>
                             <li><a class='dropdown-trigger' href="#" data-target='dropdown1'><i class="dropdown-trigger material-icons">notifications_none</i></a>
                                 <!-- Dropdown Structure -->
@@ -55,6 +55,14 @@
             <div class="container white" >
                 <div class="row">
                     <div class="col s12">
+                        <div class="input-field" style="margin-top: 50px; display: none" id="searchTxt">
+                            <i class="material-icons" style="float: right; cursor: pointer" onclick="$('#searchTxt').hide()">close</i>
+                            <input type="text" placeholder="Type to search...." style="font-size: 30px" value="" name="" id="searchTextInput"/>
+                            <p style="display: inline-block; margin-right: 30px;"> <label> <input type="checkbox" /> <span>Tags</span> </label> </p>
+                            <p style="display: inline-block; margin-right: 30px;"> <label> <input type="checkbox" /> <span>Title</span> </label> </p>
+                            <p style="display: inline; margin-right: 30px;"> <label> <input type="checkbox" /> <span>Author</span> </label> </p>
+                            <p style="display: inline"> <label> <input type="checkbox" /> <span>Description</span> </label> </p>
+                        </div>
                         <h2>Sample Article Title</h2>
                         <p class="author_name">by Kelvin Kitika</p>
                         <div class="chip">
@@ -165,14 +173,26 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div id="historyTxt" style="margin-left: 30px; display: none; ">
+                                    <div id="content_1">
+                                        <p class="teal-text" style="font-style: italic; margin-bottom: 0">(18th February 2018)</p>
+                                        <p style="margin-top: 0; padding-top: 0; margin-left: 20px;">Hi therrrrre</p>
+                                    </div>
+                                    <div id="content_1">
+                                        <p class="teal-text" style="font-style: italic; margin-bottom: 0">(18th February 2018)</p>
+                                        <p style="margin-top: 0; padding-top: 0; margin-left: 20px;">Hi therer Edwrd</p>
+                                    </div>
+                                </div>
                                 <div id="content_1">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                                    <p>Hi there Edward</p>
                                 </div>
                                 <div id="subComments_1" style="margin-left: 100px">
                                 </div>
+                                <a href="javascript:$('#historyTxt').toggle()" id="comment_1" class="teal-text" style="float: right"  >History</a>
                                 <div style="display:inline-block;">
                                     <div id="comments_like">
                                             <a style="padding-left: 20px; padding-bottom: 20px;" href="javascript:$('#input_1').toggle()" id="comment_1" class="teal-text" style="text-decoration: underline"  >Reply</a>
+                                    
                                         <a id="comments_like" href="javascript:void(0);" target="_blank" onclick="likeClickComment()">
                                             <i style="padding-left: 20px;" class="fa fa-thumbs-up fa-lg" id="icons"></i> 
                                         </a>
@@ -342,6 +362,13 @@
 
                 $(`#subComments_${count}`).html($(`#subComments_${count}`).html()+html)
            }
+        </script>
+        <script charset="utf-8">
+            $('#searchTextInput').keyup(function (evt) {
+                if (evt.keyCode) == 13) {
+
+                }
+            });
         </script>
     </body>
   </html>
