@@ -30,9 +30,22 @@
                             <a href="#!" class="left brand-logo">Author's Haven</a>
                         </div>
                         <ul class="right">
-                            <li><a href="#"><i  class="material-icons">search</i></a></li>
+                            <li><a href="#"><i class="material-icons">search</i></a></li>
                             <li><a href="#"><i class="material-icons">bookmark_border</i></a></li>
-                            <li><a href="notifications.html"><i class="material-icons">notifications_none</i></a></li>
+                            <li><a class='dropdown-trigger' href="#" data-target='dropdown1'><i class="dropdown-trigger material-icons">notifications_none</i></a>
+                                <!-- Dropdown Structure -->
+                                <ul id='dropdown1' class='dropdown-content col s6 offset-s5'>
+                                    <li class=""><a href="sample.html">John added a new article about investment</a></li>
+                                    <li class="divider" tabindex="-1"></li>
+                                    <li><a href="sample.html">Sam added a new article about cooking</a></li>
+                                    <li class="divider" tabindex="-1"></li>
+                                    <li><a href="sample.html">Jane commented on this article about workout</a></li>
+                                    <li class="divider" tabindex="-1"></li>
+                                    <li><a href="sample.html">Tom commented on this article about time management</a></li>
+                                    <li class="divider" tabindex="-1"></li>
+                                    <li><a href="sample.html">Isaac commented on this article about time management</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#" class="nav-image"><img src="static/img/avatar.png" alt="avatar"></a></li>
                         </ul>
                     </div>
@@ -235,7 +248,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="static/js/script.js"></script>
         <script src="node_modules/trumbowyg/dist/trumbowyg.min.js"></script>
-        <script>
+            <script>
+                $('.dropdown-trigger').dropdown();
+            </script>
+            <script>
             
            function togle(){
                 $('#favorite').toggleClass('fav_icon')
