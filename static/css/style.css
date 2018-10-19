@@ -370,6 +370,10 @@ nav{
     color:teal;
 }
 
+#thumb-up-like-comment,#thumb-down-dislike{
+    color:teal;
+}
+
 .targeted-icons #icons{
     color:teal;
 }

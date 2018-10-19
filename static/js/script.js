@@ -120,6 +120,7 @@ function calculateAverage() {
 }
 var x = document.getElementById('thumb-down-dislike').innerHTML;
 var i = document.getElementById('thumb-up-like').innerHTML;
+var j = document.getElementById('thumb-up-like-comment').innerHTML;
 var likeClicked = false;
 var dislikeClicked = false;
 // function likeClick() {
@@ -154,6 +155,31 @@ function likeClick() {
         $('#thumb-down-dislike').html(x);
         
         $('#target-like-icons').addClass('targeted-icons');
+        $('#target-dislike-icons').removeClass('targeted-icons');
+        likeClicked=true;
+        dislikeClicked=false;
+    }   
+}
+
+function likeClickComment() {
+    if(likeClicked===false && dislikeClicked===false){
+        j++;
+        $('#thumb-up-like-comment').html(j);
+        $('#comments_like').addClass('targeted-icons');
+        likeClicked=true;
+    }else if(likeClicked===true && dislikeClicked===false){
+        j--;
+        $('#thumb-up-like-comment').html(j);
+        $('#comments_like').removeClass('targeted-icons');
+        likeClicked=false;
+    }else if(likeClicked===false && dislikeClicked===true){
+        j++;
+        x--;
+        
+        $('#thumb-up-like-comment').html(j);
+        $('#thumb-down-dislike').html(x);
+        
+        $('#comments_like').addClass('targeted-icons');
         $('#target-dislike-icons').removeClass('targeted-icons');
         likeClicked=true;
         dislikeClicked=false;
