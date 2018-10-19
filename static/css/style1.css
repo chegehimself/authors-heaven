@@ -227,3 +227,6 @@ h2 {
 .pagination li.active {
   background-color: teal;
 }
+.pagination li.active {
+	background-color: teal;
+}
