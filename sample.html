@@ -365,8 +365,17 @@
         </script>
         <script charset="utf-8">
             $('#searchTextInput').keyup(function (evt) {
-                if (evt.keyCode) == 13) {
-                    window.location.replace('https://james-chege.github.io/authors-heaven/search_results');
+                if (evt.keyCode == 13) {
+                    var value = $('#searchTextInput').val().trim().toLowerCase();
+                    if (value == 'pizza') {
+                        window.location.replace('https://james-chege.github.io/authors-heaven/results/pizza');
+                    } else if (value == 'ian') {
+                        window.location.replace('https://james-chege.github.io/authors-heaven/results/ian');
+                    } else if (value == 'sample') {
+                        window.location.replace('https://james-chege.github.io/authors-heaven/results/sample');
+                    } else  {
+                        window.location.replace('https://james-chege.github.io/authors-heaven/404');
+                    }
                 }
             });
         </script>
